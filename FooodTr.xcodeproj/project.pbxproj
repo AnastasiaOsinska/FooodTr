@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3936258224AA012A0040DEA7 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */; };
 		39F6F16924A7955800CE267D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16824A7955800CE267D /* AppDelegate.swift */; };
 		39F6F16B24A7955800CE267D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16A24A7955800CE267D /* SceneDelegate.swift */; };
 		39F6F16D24A7955800CE267D /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16C24A7955800CE267D /* MealViewController.swift */; };
@@ -17,9 +18,11 @@
 		39F6F17F24A7958400CE267D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F17E24A7958400CE267D /* MealTableViewCell.swift */; };
 		39F6F18124A7959700CE267D /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F18024A7959700CE267D /* MealTableViewController.swift */; };
 		39F6F18324A795A200CE267D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F18224A795A200CE267D /* RatingControl.swift */; };
+		D0F6E9BB3A7BCD326FB8863A /* Pods_FooodTr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD83B9BFB9F4BDCC8A25F65 /* Pods_FooodTr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		39F6F16524A7955800CE267D /* FooodTr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooodTr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F6F16824A7955800CE267D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F6F16A24A7955800CE267D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		39F6F17E24A7958400CE267D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		39F6F18024A7959700CE267D /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		39F6F18224A795A200CE267D /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		90A1B5CB4766955DE0FD18A0 /* Pods-FooodTr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooodTr.debug.xcconfig"; path = "Target Support Files/Pods-FooodTr/Pods-FooodTr.debug.xcconfig"; sourceTree = "<group>"; };
+		B86846AEB7B69A2E8302DEC5 /* Pods-FooodTr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooodTr.release.xcconfig"; path = "Target Support Files/Pods-FooodTr/Pods-FooodTr.release.xcconfig"; sourceTree = "<group>"; };
+		DBD83B9BFB9F4BDCC8A25F65 /* Pods_FooodTr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooodTr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F6E9BB3A7BCD326FB8863A /* Pods_FooodTr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +57,8 @@
 			children = (
 				39F6F16724A7955800CE267D /* FooodTr */,
 				39F6F16624A7955800CE267D /* Products */,
+				D6BBD75D3152077CCBBC1F32 /* Pods */,
+				FF3726F9F14AFD3F086EF351 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +84,26 @@
 				39F6F17E24A7958400CE267D /* MealTableViewCell.swift */,
 				39F6F18024A7959700CE267D /* MealTableViewController.swift */,
 				39F6F18224A795A200CE267D /* RatingControl.swift */,
+				3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */,
 			);
 			path = FooodTr;
+			sourceTree = "<group>";
+		};
+		D6BBD75D3152077CCBBC1F32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90A1B5CB4766955DE0FD18A0 /* Pods-FooodTr.debug.xcconfig */,
+				B86846AEB7B69A2E8302DEC5 /* Pods-FooodTr.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF3726F9F14AFD3F086EF351 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBD83B9BFB9F4BDCC8A25F65 /* Pods_FooodTr.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39F6F17924A7955900CE267D /* Build configuration list for PBXNativeTarget "FooodTr" */;
 			buildPhases = (
+				8109097F58188EA0D249464F /* [CP] Check Pods Manifest.lock */,
 				39F6F16124A7955700CE267D /* Sources */,
 				39F6F16224A7955700CE267D /* Frameworks */,
 				39F6F16324A7955700CE267D /* Resources */,
+				B9292EB2D6183615DC5331A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8109097F58188EA0D249464F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FooodTr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9292EB2D6183615DC5331A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooodTr/Pods-FooodTr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooodTr/Pods-FooodTr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FooodTr/Pods-FooodTr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39F6F16124A7955700CE267D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -157,6 +228,7 @@
 				39F6F16B24A7955800CE267D /* SceneDelegate.swift in Sources */,
 				39F6F18124A7959700CE267D /* MealTableViewController.swift in Sources */,
 				39F6F17F24A7958400CE267D /* MealTableViewCell.swift in Sources */,
+				3936258224AA012A0040DEA7 /* EditPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +370,7 @@
 		};
 		39F6F17A24A7955900CE267D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90A1B5CB4766955DE0FD18A0 /* Pods-FooodTr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +388,7 @@
 		};
 		39F6F17B24A7955900CE267D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86846AEB7B69A2E8302DEC5 /* Pods-FooodTr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

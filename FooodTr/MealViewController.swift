@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import PhotoEditorSDK
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -19,15 +20,18 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var ratingControl: RatingControl!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    /*
-     This value is either passed by `MealTableViewController` in `prepare(for:sender:)`
-     or constructed as part of adding a new meal.
-     */
+    @IBOutlet weak var editPhoto: UIButton!
+    
     var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
+    }
+    
+    //MARK: Setup
+    
+    func setup() {
         nameTextField.delegate = self
         
         // Set up views if editing an existing Meal.
@@ -40,6 +44,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
+        editPhoto.addTarget(self, action: #selector(editPhotoAction), for: .touchUpInside)
     }
     
     //MARK: UITextFieldDelegate
@@ -134,6 +139,11 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    @IBAction func editPhotoAction(_ sender: Any) {
+        navigationController?.pushViewController(EditPhotoViewController(), animated: true)
+    }
+    
     
     //MARK: Private Methods
     
