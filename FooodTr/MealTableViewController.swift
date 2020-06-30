@@ -17,7 +17,6 @@ class MealTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -104,6 +103,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            overrideUserInterfaceStyle = .dark
         }
     }
     

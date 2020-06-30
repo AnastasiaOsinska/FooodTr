@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3936258224AA012A0040DEA7 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */; };
 		39F6F16924A7955800CE267D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16824A7955800CE267D /* AppDelegate.swift */; };
 		39F6F16B24A7955800CE267D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16A24A7955800CE267D /* SceneDelegate.swift */; };
 		39F6F16D24A7955800CE267D /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6F16C24A7955800CE267D /* MealViewController.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		39F6F16524A7955800CE267D /* FooodTr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooodTr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F6F16824A7955800CE267D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F6F16A24A7955800CE267D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				39F6F17E24A7958400CE267D /* MealTableViewCell.swift */,
 				39F6F18024A7959700CE267D /* MealTableViewController.swift */,
 				39F6F18224A795A200CE267D /* RatingControl.swift */,
-				3936258124AA012A0040DEA7 /* EditPhotoViewController.swift */,
 			);
 			path = FooodTr;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 				39F6F16B24A7955800CE267D /* SceneDelegate.swift in Sources */,
 				39F6F18124A7959700CE267D /* MealTableViewController.swift in Sources */,
 				39F6F17F24A7958400CE267D /* MealTableViewCell.swift in Sources */,
-				3936258224AA012A0040DEA7 /* EditPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

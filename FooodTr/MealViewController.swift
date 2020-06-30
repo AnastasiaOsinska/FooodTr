@@ -24,8 +24,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         photoImageView.image = image
         photoEditViewController.navigationController?.popViewController(animated: true)
     }
-    
-    
+   
     //MARK: Properties
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -38,10 +37,13 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     var meal: Meal?
     var photoEditViewController: PhotoEditViewController?
-    
+    let configuration = Configuration { builder in
+         builder.theme = .light
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+//        overrideUserInterfaceStyle = .light
     }
     
     //MARK: Setup
@@ -55,8 +57,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             nameTextField.text   = meal.name
             photoImageView.image = meal.photo
             ratingControl.rating = meal.rating
-            
-            photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: meal.photo!))
+            photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: meal.photo!),configuration: configuration)
            
         }
         
@@ -101,8 +102,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
-        photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: selectedImage))
-        // Dismiss the picker.
+        photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: selectedImage), configuration: configuration)
         dismiss(animated: true, completion: nil)
     }
     //MARK: Navigation
@@ -153,10 +153,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
-    
+   
     @IBAction func editPhotoAction(_ sender: Any) {
         photoEditViewController?.delegate = self
         navigationController?.pushViewController(photoEditViewController!, animated: true)
+       
+        
     }
     
     
