@@ -105,7 +105,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L08-Vn-LwT" customClass="RatingControl" customModule="FooodTr" customModuleProvider="target">
-                                        <rect key="frame" x="61" y="448.5" width="252" height="44"/>
+                                        <rect key="frame" x="61" y="448.5" width="252" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="5"/>
@@ -113,7 +113,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w41-pC-kYD">
-                                        <rect key="frame" x="140" y="518.5" width="94" height="42"/>
+                                        <rect key="frame" x="140" y="524.5" width="94" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Edit Photo"/>
                                     </button>

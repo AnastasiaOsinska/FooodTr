@@ -18,15 +18,17 @@ class EditPhotoViewController: UIViewController, PhotoEditViewControllerDelegate
 
     override func viewDidLoad() {
           super.viewDidLoad()
-         cameraViewController.modalPresentationStyle = .fullScreen
-        present(cameraViewController, animated: false, completion: nil)
-        
-         cameraCotrol()
+         //cameraViewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(cameraViewController, animated: true)
+        //present(cameraViewController, animated: false, completion: nil)
+       
+         //cameraCotrol()
           self.title = "Edit"
           
       }
     
     func cameraCotrol(){
+        
         cameraViewController.dataCompletionBlock = { [unowned cameraViewController] data in
           guard let data = data else {
             return
@@ -92,5 +94,5 @@ class EditPhotoViewController: UIViewController, PhotoEditViewControllerDelegate
     }
   }
 
-
 }
+

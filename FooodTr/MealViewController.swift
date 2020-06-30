@@ -7,10 +7,24 @@
 //
 
 import UIKit
-import os.log
 import PhotoEditorSDK
 
-class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PhotoEditViewControllerDelegate {
+    
+    func photoEditViewControllerDidFailToGeneratePhoto(_ photoEditViewController: PhotoEditViewController) {
+        
+    }
+    
+    func photoEditViewControllerDidCancel(_ photoEditViewController: PhotoEditViewController) {
+        
+    }
+    
+  
+    func photoEditViewController(_ photoEditViewController: PhotoEditViewController, didSave image: UIImage, and data: Data) {
+        photoImageView.image = image
+        photoEditViewController.navigationController?.popViewController(animated: true)
+    }
+    
     
     //MARK: Properties
     
@@ -23,6 +37,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var editPhoto: UIButton!
     
     var meal: Meal?
+    var photoEditViewController: PhotoEditViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +55,9 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             nameTextField.text   = meal.name
             photoImageView.image = meal.photo
             ratingControl.rating = meal.rating
+            
+            photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: meal.photo!))
+           
         }
         
         // Enable the Save button only if the text field has a valid Meal name.
@@ -50,12 +68,9 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     //MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         // Hide the keyboard.
         textField.resignFirstResponder()
-        
         return true
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -86,7 +101,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
-        
+        photoEditViewController = PhotoEditViewController(photoAsset: Photo(image: selectedImage))
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
     }
@@ -112,7 +127,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         super.prepare(for: segue, sender: sender)
         // Configure the destination view controller only when the save button is pressed.
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
-            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
         let name = nameTextField.text ?? ""
@@ -141,8 +155,10 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     @IBAction func editPhotoAction(_ sender: Any) {
-        navigationController?.pushViewController(EditPhotoViewController(), animated: true)
+        photoEditViewController?.delegate = self
+        navigationController?.pushViewController(photoEditViewController!, animated: true)
     }
+    
     
     
     //MARK: Private Methods
@@ -152,6 +168,5 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         let text = nameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
-    
 }
 
